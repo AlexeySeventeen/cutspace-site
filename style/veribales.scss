@@ -1,0 +1,56 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+// color
+$accentColor: #f78434;
+
+.none {
+  display: none;
+}
+
+@mixin boldText($color: #323232, $fontSize: 42px) {
+  color: $color;
+  font-family: Poppins;
+  font-size: $fontSize;
+  font-weight: 700;
+  line-height: 62px;
+  letter-spacing: 0.8px;
+  @media (max-width: 1150px) {
+    font-size: 30px;
+    line-height: 2;
+  }
+  @media (max-width: 675px) {
+    font-size: 20px;
+  }
+}
+
+@mixin regularText($color: #323232) {
+  color: $color;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 1.15px;
+}
+
+@mixin wrapper {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin btn($color: white, $backColor: #f78434) {
+  color: $color;
+  border-radius: 29px;
+  width: 157px;
+  height: 58px;
+  background-color: $backColor;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  &:hover {
+    background-color: darken($color: $backColor, $amount: 5%);
+  }
+}

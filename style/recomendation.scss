@@ -1,0 +1,155 @@
+@import './veribales.scss';
+
+.reccomend {
+  margin-bottom: 58px;
+  position: relative;
+}
+.reccomend__wrapper {
+  @include wrapper;
+}
+.reccomend__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 58px;
+}
+.reccomend__head_bold {
+  @include boldText;
+  width: 455px;
+}
+.reccomend__head_regular {
+  @include regularText($color: #606060);
+  width: 400px;
+}
+.reccomend__body {
+  display: flex;
+  gap: 30px;
+}
+.reccomend__card_textbox {
+  box-shadow: 0px 40px 52px -22px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  padding: 30px;
+}
+.reccomend__card {
+  position: relative;
+}
+.reccomend__card_regular {
+  @include regularText;
+  width: 292px;
+  margin-bottom: 23px;
+}
+.reccomend__card_bold {
+  @include boldText($fontSize: 18px);
+  margin-bottom: 10px;
+  height: 27px;
+}
+.reccomend__card_regular_orange {
+  @include regularText($color: #f78434);
+}
+.reccomend__card_regular_blue {
+  @include regularText($color: #58bebf);
+}
+// figure
+.reccomend__playBtn {
+  position: absolute;
+  top: 134px;
+  right: 20px;
+}
+.reccomend__blueRound {
+  position: absolute;
+  top: -40px;
+  right: -36px;
+}
+
+// media
+@media (max-width: 1250px) {
+  .reccomend__blueRound {
+    display: none;
+  }
+}
+@media (max-width: 1150px) {
+  .reccomend__body {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .reccomend__card_bold {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .reccomend__head {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .reccomend__head_bold {
+    width: auto;
+  }
+  .reccomend__head_regular {
+    width: auto;
+  }
+}
+
+// animation
+// for full card
+.reccomend__card:hover {
+  cursor: pointer;
+  & .reccomend__card_textbox {
+    background-color: darken($color: #fff, $amount: 4%);
+  }
+  // for img
+  & .reccomend__img {
+    transform: scale(1.1);
+  }
+}
+
+// for img
+.reccomend__img_block {
+  overflow: hidden;
+  border-radius: 5px 5px 0px 0px;
+}
+
+// for modal window
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__wrapper {
+  position: absolute;
+  text-align: center;
+  background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  z-index: 17;
+  margin-top: 75px;
+}
+body {
+  position: relative;
+}
+.modal__shadow {
+  z-index: 2;
+  background-color: rgba(58, 57, 57, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.modal__heading {
+  @include boldText;
+}
+.modal__text {
+  @include regularText;
+  margin-bottom: 10px;
+}
+.modal__btn {
+  @include btn;
+}

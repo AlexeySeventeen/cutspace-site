@@ -1,0 +1,93 @@
+@import "veribales"; //@incluse bold regularText(color,fontSize)
+
+.nav {
+  padding: 44px 0;
+}
+.nav__wrapper {
+  @include wrapper;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  display: flex;
+}
+.nav__logoText {
+  @include boldText($fontSize: 24px);
+  margin-left: 5px;
+  line-height: 30px;
+  min-width: 20px;
+}
+.nav__links {
+  display: flex;
+  gap: 42px;
+}
+.nav__link {
+  @include regularText;
+
+  &:hover {
+    color: $accentColor;
+  }
+}
+.nav__link_active {
+  color: $accentColor;
+  font-weight: 700;
+}
+
+// mobile
+//work with btn
+.nav__btn {
+  display: none;
+}
+
+@media (max-width: 1150px) {
+  .nav__links {
+    display: none;
+  }
+  .nav__btn {
+    display: block;
+  }
+}
+// full skrin
+.mobile__nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  overflow-y: hidden;
+  z-index: 19;
+  padding-top: 35px;
+  display: flex;
+  align-items: flex-start;
+}
+// links
+.visibaleNav {
+  display: block;
+  li {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  li a {
+    font-size: 30px;
+  }
+}
+// close btn
+.close {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+}
+
+.none {
+  display: none;
+}
+
+
+// media
+@media (max-width: 1150px) {
+  .nav {
+    padding: 25px 0;
+  }
+}

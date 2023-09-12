@@ -1,0 +1,55 @@
+@import "./veribales.scss";
+
+.provide {
+  max-width: 1440px;
+  padding: 0 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 140px;
+}
+.provide__img {
+  width: 849px;
+  height: 550px;
+  overflow: hidden;
+}
+.provide__text {
+  display: inline-block;
+}
+.provide__text-bold {
+  @include boldText;
+  width: 374px;
+  margin-bottom: 20px;
+}
+.provide__text-regular {
+  @include regularText;
+  width: 374px;
+  margin-bottom: 40px;
+}
+.provide__btn {
+  @include btn;
+}
+
+// media
+@media (max-width: 1150px) {
+  .provide {
+    margin-bottom: 40px;
+  }
+  .provide__img {
+    display: none;
+  }
+  .provide__text {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .provide__text-bold {
+    width: auto;
+    margin-bottom: 10px;
+  }
+  .provide__text-regular {
+    width: auto;
+    margin-bottom: 20px;
+  }
+}

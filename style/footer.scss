@@ -1,0 +1,92 @@
+@import './veribales.scss';
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+  @include wrapper;
+  padding: 91px 0;
+}
+.footer__firstBlock {
+  margin-right: 224px;
+}
+.nav__logo-footer {
+  margin-top: 18px;
+}
+.footer__firstBlock-text {
+  @include regularText;
+  margin-top: 18px;
+  margin-bottom: 40px;
+}
+.footer__otherBlock {
+  display: flex;
+  flex-direction: column;
+  & :not(:first-child) {
+    @include regularText;
+    margin-top: 13px;
+    font-size: 14px;
+  }
+  & :first-child {
+    @include boldText($fontSize: 21px);
+    margin-top: 18px;
+  }
+}
+
+.nav__logo-footer {
+  position: relative;
+}
+.footer__firstBlock-text {
+  width: 300px;
+}
+// media
+@media (max-width: 1150px) {
+  .footer__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    padding: 25px 0;
+  }
+  .footer__firstBlock {
+    margin-right: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav__logoImg-footer {
+    position: absolute;
+    top: 14px;
+    left: -25px;
+  }
+}
+@media (max-width: 900px) {
+  .footer__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 10px 0;
+  }
+  .footer__firstBlock {
+    margin-right: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav__logoText-footer {
+    font-size: 30px;
+    min-width: 300px;
+  }
+  .nav__logoImg-footer {
+    position: absolute;
+    top: 14px;
+    left: 45px;
+  }
+  .footer__firstBlock-text {
+    max-width: 400px;
+  }
+  .footer__otherBlock{
+    text-align: center;
+  }
+}

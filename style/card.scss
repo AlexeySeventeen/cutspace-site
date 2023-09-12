@@ -1,0 +1,71 @@
+@import "./veribales.scss";
+
+.card {
+  margin-left: 10px;
+  margin-bottom: 144px;
+}
+.card__wrapper {
+  @include wrapper;
+  height: 464px;
+  background-image: url("../img/card/Bg.png");
+  width: 1110px;
+  position: relative;
+}
+.card__text {
+  position: absolute;
+  top: 92px;
+  right: 117px;
+}
+.card__boldText {
+  @include boldText($color: white);
+  width: 342px;
+  height: 124px;
+  margin-bottom: 15px;
+}
+.card__regularText {
+  @include regularText($color: white);
+  width: 342px;
+  margin-bottom: 30px;
+}
+.card__btn-orange {
+  @include btn;
+  margin-right: 18px;
+}
+.card__btns {
+  margin-left: -5px;
+}
+.card__btn-white {
+  @include btn($backColor: white, $color: black);
+  text-align: center;
+}
+.card__btn-arrow {
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+// media
+@media (max-width: 1150px) {
+  .card {
+    margin: auto 10px;
+    margin-bottom: 40px;
+  }
+  .card__wrapper {
+    background-image: url("../img/card/bg2.png");
+    width: auto;
+    border-radius: 20px;
+    height: 220px;
+    padding: 8px 0;
+  }
+  .card__text {
+    position: unset;
+    text-align: center;
+  }
+  .card__boldText {
+    width: auto;
+    height: auto;
+  }
+  .card__regularText {
+    width: auto;
+    height: auto;
+  }
+}

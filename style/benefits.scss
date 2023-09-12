@@ -1,0 +1,47 @@
+@import "./veribales.scss";
+
+.benefits {
+  margin-bottom: 170px;
+}
+.benefits__wrapper {
+  @include wrapper;
+}
+.benefits__heading {
+  @include boldText;
+  text-align: center;
+  margin-bottom: 58px;
+}
+.benefits__cards {
+  display: flex;
+  gap: 35px;
+}
+.benefits__card {
+  text-align: center;
+}
+.benefits__card_heading {
+  @include boldText($fontSize: 28px);
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+.benefits__card_text {
+  @include regularText;
+}
+
+// media
+@media (max-width: 1150px) {
+  .benefits {
+    margin-bottom: 70px;
+  }
+  .benefits__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .benefits__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+

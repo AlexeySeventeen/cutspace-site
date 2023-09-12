@@ -1,0 +1,31 @@
+@import "veribales";
+
+.products {
+  padding-top: 100px;
+  padding-bottom: 90px;
+}
+.products__wrapper {
+  @include wrapper;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .products__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    gap: 20px;
+  }
+  .products {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .products {
+    padding: 25px 0;
+  }
+}
