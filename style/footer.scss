@@ -30,6 +30,9 @@
     @include boldText($fontSize: 21px);
     margin-top: 18px;
   }
+  & a:hover {
+    color: $accentColor;
+  }
 }
 
 .nav__logo-footer {
@@ -86,7 +89,7 @@
   .footer__firstBlock-text {
     max-width: 400px;
   }
-  .footer__otherBlock{
+  .footer__otherBlock {
     text-align: center;
   }
 }

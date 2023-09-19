@@ -6,7 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="./style/style.css" />
+    <!-- libs for video on page  -->
     <link rel="stylesheet" href="./libs/modal video/videotube.min.css" />
+    <!-- icon -->
+    <link
+      type="image/x-icon"
+      href="./favicon/favicon.ico"
+      rel="shortcut icon"
+    />
   </head>
 
   <!-- 1150px -->
@@ -15,11 +22,12 @@
     <!-- navigation -->
     <nav class="nav" id="navBlock">
       <section class="nav__wrapper">
-        <div class="nav__logo" id="navLogo">
-          <img src="./img/nav/logo.svg" alt="logo" class="nav__logoImg" />
-          <h1 class="nav__logoText">CutSpace</h1>
-        </div>
-
+        <a href="">
+          <div class="nav__logo" id="navLogo">
+            <img src="./img/nav/logo.svg" alt="logo" class="nav__logoImg" />
+            <h1 class="nav__logoText">CutSpace</h1>
+          </div>
+        </a>
         <ul class="nav__links" id="navLinks">
           <li><a href="#!" class="nav__link nav__link_active">Home</a></li>
           <li><a href="#!" class="nav__link">About us</a></li>
@@ -119,7 +127,7 @@
               href="https://www.youtube.com/watch?v=ptBMqA5w9gc&t=1196s&ab_channel=kujipodcast"
               class="tube"
             >
-              <button class="card__btn-white">
+              <button class="card__btn-white" data-toggle-fullscreen>
                 <img
                   class="card__btn-arrow"
                   src="./img/card/Icon.svg"
@@ -235,11 +243,12 @@
           <!-- card1 -->
           <a href="https://youtu.be/GHCk5E3o-qs" class="tube">
             <div class="reccomend__card">
-              <div class="reccomend__img_block">
+              <div class="reccomend__img_block" >
                 <img
                   src="./img/recomendation/img1.png"
                   alt="pic1"
                   class="reccomend__img"
+                  data-toggle-fullscreen
                 />
               </div>
               <div class="reccomend__card_textbox">
@@ -328,17 +337,22 @@
     <div class="footer">
       <section class="footer__wrapper">
         <div class="footer__firstBlock">
-          <div class="nav__logo nav__logo-footer">
-            <img src="./img/nav/logo.svg" alt="logo" class="nav__logoImg nav__logoImg-footer" />
-            <h1 class="nav__logoText nav__logoText-footer">CutSpace</h1>
-          </div>
+          <a href="">
+            <div class="nav__logo nav__logo-footer">
+              <img
+                src="./img/nav/logo.svg"
+                alt="logo"
+                class="nav__logoImg nav__logoImg-footer"
+              />
+              <h1 class="nav__logoText nav__logoText-footer">CutSpace</h1>
+            </div>
+          </a>
 
           <p class="footer__firstBlock-text">
             Quae fuerit causa, nollem me ab illo inventore veritatis et.
           </p>
 
-
-          <div class="footer__firstBlock-logo ">
+          <div class="footer__firstBlock-logo">
             <ul>
               <li class="footer__links">
                 <a href="#!">
@@ -384,12 +398,23 @@
     </div>
 
     <div class="modal__shadow none" id="shadow"></div>
+
+    <!-- scripts -->
     <!-- mobile navigation -->
     <script src="./scripts/nav.js"></script>
 
     <!-- video in modal window -->
     <script src="./libs/modal video/videotube.min.js"></script>
+
     <!-- modal window -->
     <script src="./scripts/modal.js"></script>
+
+    <script>
+      document.addEventListener('click', function (event) {
+        if (!event.target.hasAttribute('data-toggle-fullscreen')) return;
+
+        document.documentElement.requestFullscreen();
+      });
+    </script>
   </body>
 </html>

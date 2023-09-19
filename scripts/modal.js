@@ -21,6 +21,5 @@ shadow.addEventListener('click', function () {
 
   modalWindow.onclick = function (e) {
     e.stopPropagation();
-    
-  }
+  };
 });

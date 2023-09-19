@@ -1105,11 +1105,9 @@
 }
 
 .modal {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: fixed;
+  top: 40%;
+  left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1119,10 +1117,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 100;
 }
 
 .modal__wrapper {
-  position: absolute;
+  position: fixed;
   text-align: center;
   background-color: white;
   max-width: 600px;
@@ -1274,6 +1273,9 @@ body {
   .footer__otherBlock :first-child {
     font-size: 20px;
   }
+}
+.footer__otherBlock a:hover {
+  color: #f78434;
 }
 
 .nav__logo-footer {
