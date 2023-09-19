@@ -1,1 +1,2 @@
-https://alexeyseventeen.github.io/only-js-calculator/
+link to the site
+https://alexeyseventeen.github.io/cutspace-site/
