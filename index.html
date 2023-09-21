@@ -124,7 +124,7 @@
           <div class="card__btns">
             <button class="card__btn-orange">Contact us</button>
             <a
-              href="https://www.youtube.com/watch?v=ptBMqA5w9gc&t=1196s&ab_channel=kujipodcast"
+              href="https://www.youtube.com/watch?v=d0GtLdjWLW4&t=1s&ab_channel=%D0%B0%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%D0%BF%D0%BE%D1%82%D0%B0%D0%BD%D1%86%D0%B5%D0%B2%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5%D0%B9%3F"
               class="tube"
             >
               <button class="card__btn-white" data-toggle-fullscreen>
@@ -241,35 +241,32 @@
 
         <div class="reccomend__body">
           <!-- card1 -->
-          <a href="https://youtu.be/GHCk5E3o-qs" class="tube">
-            <div class="reccomend__card">
-              <div class="reccomend__img_block">
-                <img
-                  src="./img/recomendation/img1.png"
-                  alt="pic1"
-                  class="reccomend__img"
-                  data-toggle-fullscreen
-                />
-              </div>
-              <div class="reccomend__card_textbox">
-                <p class="reccomend__card_regular">
-                  "Omne animal, simul atque integre iudicante itaque earum motus
-                  et."
-                </p>
-                <p class="reccomend__card_bold">Arend Pellewever</p>
-                <p class="reccomend__card_regular_orange">Baltimore</p>
-              </div>
-              <!-- play btn -->
+          <div class="reccomend__card" data-card="card1">
+            <div class="reccomend__img_block">
               <img
-                src="./img/recomendation/Play btn.svg"
-                alt="figure1"
-                class="reccomend__playBtn"
+                src="./img/recomendation/img1.png"
+                alt="pic1"
+                class="reccomend__img"
               />
             </div>
-          </a>
+            <div class="reccomend__card_textbox">
+              <p class="reccomend__card_regular">
+                "Omne animal, simul atque integre iudicante itaque earum motus
+                et."
+              </p>
+              <p class="reccomend__card_bold">Arend Pellewever</p>
+              <p class="reccomend__card_regular_orange">Baltimore</p>
+            </div>
+            <!-- play btn -->
+            <img
+              src="./img/recomendation/Play btn.svg"
+              alt="figure1"
+              class="reccomend__playBtn"
+            />
+          </div>
 
           <!-- card2 -->
-          <div class="reccomend__card" id="block_for_open_modal">
+          <div class="reccomend__card" data-card="card2">
             <div class="reccomend__img_block">
               <img
                 src="./img/recomendation/img2.png"
@@ -286,25 +283,10 @@
               <p class="reccomend__card_regular_blue">Cleveland</p>
             </div>
           </div>
-          <!-- modal -->
-
-          <div class="modal none" id="modal">
-            <div class="modal__wrapper" id="modal__wrapper">
-              <h4 class="modal__heading">Heading</h4>
-              <p class="modal__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
-                sed atque blanditiis vero animi vel in ab amet at deleniti ex,
-                cumque natus facere! Consectetur corrupti asperiores ipsam alias
-                facilis fugit cum dolore voluptates, omnis, error praesentium
-                recusandae voluptas assumenda nihil. Architecto.
-              </p>
-              <button class="modal__btn" id="closeBtn">Close</button>
-            </div>
-          </div>
 
           <!-- card3 -->
           <a href="#!">
-            <div class="reccomend__card">
+            <div class="reccomend__card" data-card="card3">
               <div class="reccomend__img_block">
                 <img
                   src="./img/recomendation/img3.png"
@@ -331,7 +313,52 @@
       </div>
     </div>
 
-    <!-- contact us -->
+    <!-- modal window -->
+    <div class="modal__shadow none" id="shadow">
+      <div class="modal__allCard">
+        <div class="modal__wrapper none" id="card1">
+          <div class="modal__body">
+            <h1>Modal card1</h1>
+            <div class="modal__line"></div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
+              dolores! Sequi porro, distinctio culpa perspiciatis explicabo
+              numquam temporibus ab quisquam saepe?
+            </p>
+            <div class="modal__line"></div>
+            <button data-closeBtn>Close</button>
+          </div>
+        </div>
+
+        <div class="modal__wrapper none" id="card2">
+          <div class="modal__body">
+            <h1>Modal card2</h1>
+            <div class="modal__line"></div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
+              dolores! Sequi porro, distinctio culpa perspiciatis explicabo
+              numquam temporibus ab quisquam saepe?
+            </p>
+            <div class="modal__line"></div>
+            <button data-closeBtn>Close</button>
+          </div>
+        </div>
+
+        <div class="modal__wrapper none" id="card3">
+          <div class="modal__body">
+            <h1>Modal card3</h1>
+            <div class="modal__line"></div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
+              dolores! Sequi porro, distinctio culpa perspiciatis explicabo
+              numquam temporibus ab quisquam saepe?
+            </p>
+            <div class="modal__line"></div>
+            <button data-closeBtn>Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- footer -->
     <div class="footer">
@@ -396,8 +423,6 @@
         </div>
       </section>
     </div>
-
-    <div class="modal__shadow none" id="shadow"></div>
 
     <!-- scripts -->
     <!-- mobile navigation -->

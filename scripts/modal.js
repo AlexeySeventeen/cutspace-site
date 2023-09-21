@@ -1,25 +1,45 @@
-const blockModal = document.querySelector('#block_for_open_modal');
-const modalWindow = document.querySelector('#modal');
-const closeBtn = document.querySelector('#closeBtn');
-const body = document.querySelector('#body');
+const allCard = document.querySelectorAll('[data-card]');
+const allCloseBtn = document.querySelectorAll('[data-closeBtn]');
 const shadow = document.querySelector('#shadow');
 
-// open window
-blockModal.addEventListener('click', function () {
-  modalWindow.classList.remove('none');
-  shadow.classList.remove('none');
-});
-// close btn
-closeBtn.addEventListener('click', function () {
-  modalWindow.classList.add('none');
-  shadow.classList.add('none');
-});
-// close outside the window
-shadow.addEventListener('click', function () {
-  modalWindow.classList.add('none');
-  shadow.classList.add('none');
+const closeCard = function (whatToDo) {
+  allCard.forEach((card) => {
+    const modal = document.querySelector('#' + card.dataset.card);
+    modal.classList.add('none');
+    shadow.classList.add('none');
+  });
+};
 
-  modalWindow.onclick = function (e) {
-    e.stopPropagation();
-  };
+// открыть
+allCard.forEach((card) => {
+  card.addEventListener('click', () => {
+    const modal = document.querySelector('#' + card.dataset.card);
+    modal.classList.remove('none');
+    shadow.classList.remove('none');
+  });
+});
+
+// закрыть по кнопке внутри модального окна
+allCloseBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    closeCard();
+  });
+});
+
+// для закрытия модального окна при нажатии вне его
+shadow.addEventListener('click', function () {
+  closeCard();
+});
+
+// чтобы не закрывалась при нажатии внутри модального окна
+allCard.forEach((card) => {
+  const modal = document.querySelector('#' + card.dataset.card);
+  modal.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+});
+
+// закрыть при нажатии на esc
+document.addEventListener('keydown', (e) => {
+  closeCard();
 });

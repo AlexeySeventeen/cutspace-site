@@ -1,43 +1,46 @@
-// for modal window
-.modal {
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-  }
-  .modal__wrapper {
-    position: fixed;
-    text-align: center;
-    background-color: white;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 10px;
-    z-index: 17;
-    margin-top: 75px;
-  }
-  body {
-    position: relative;
-  }
-  .modal__shadow {
-    z-index: 2;
-    background-color: rgba(58, 57, 57, 0.5);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  .modal__heading {
+@import './veribales.scss';
+body {
+  position: relative;
+}
+.modal__shadow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(24, 21, 21, 0.575);
+  z-index: 100;
+}
+.modal__allCard {
+  display: flex;
+  justify-content: center;
+}
+.modal__wrapper {
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: white;
+  z-index: 100;
+  position: fixed;
+  top: 35%;
+  margin: 0 10px;
+}
+.modal__body {
+  text-align: center;
+  & h1 {
     @include boldText;
   }
-  .modal__text {
+  & p {
     @include regularText;
-    margin-bottom: 10px;
   }
-  .modal__btn {
+  & button {
     @include btn;
+    margin-top: 5px;
   }
-  
+}
+
+.modal__line {
+  height: 2px;
+  background-color: black;
+}

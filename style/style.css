@@ -8,6 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 .none {
   display: none;
 }
@@ -1104,31 +1105,8 @@
   border-radius: 5px 5px 0px 0px;
 }
 
-.modal {
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 100;
-}
-
-.modal__wrapper {
-  position: fixed;
-  text-align: center;
-  background-color: white;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 10px;
-  z-index: 17;
-  margin-top: 75px;
+.none {
+  display: none;
 }
 
 body {
@@ -1136,16 +1114,40 @@ body {
 }
 
 .modal__shadow {
-  z-index: 2;
-  background-color: rgba(58, 57, 57, 0.5);
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  background-color: rgba(24, 21, 21, 0.575);
+  z-index: 100;
 }
 
-.modal__heading {
+.modal__allCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal__wrapper {
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: white;
+  z-index: 100;
+  position: fixed;
+  top: 35%;
+  margin: 0 10px;
+}
+
+.modal__body {
+  text-align: center;
+}
+.modal__body h1 {
   color: #323232;
   font-family: Poppins;
   font-size: 42px;
@@ -1154,18 +1156,17 @@ body {
   letter-spacing: 0.8px;
 }
 @media (max-width: 1150px) {
-  .modal__heading {
+  .modal__body h1 {
     font-size: 30px;
     line-height: 2;
   }
 }
 @media (max-width: 675px) {
-  .modal__heading {
+  .modal__body h1 {
     font-size: 20px;
   }
 }
-
-.modal__text {
+.modal__body p {
   color: #323232;
   font-family: Poppins;
   font-size: 16px;
@@ -1173,10 +1174,8 @@ body {
   font-weight: 400;
   line-height: 27px;
   letter-spacing: 1.15px;
-  margin-bottom: 10px;
 }
-
-.modal__btn {
+.modal__body button {
   color: white;
   border-radius: 29px;
   width: 157px;
@@ -1187,9 +1186,15 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-top: 5px;
 }
-.modal__btn:hover {
+.modal__body button:hover {
   background-color: #f6751b;
+}
+
+.modal__line {
+  height: 2px;
+  background-color: black;
 }
 
 .none {
