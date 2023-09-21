@@ -2,7 +2,7 @@ const allCard = document.querySelectorAll('[data-card]');
 const allCloseBtn = document.querySelectorAll('[data-closeBtn]');
 const shadow = document.querySelector('#shadow');
 
-const closeCard = function (whatToDo) {
+const closeCard = function () {
   allCard.forEach((card) => {
     const modal = document.querySelector('#' + card.dataset.card);
     modal.classList.add('none');
